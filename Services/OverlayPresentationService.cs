@@ -5,9 +5,9 @@ using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using MvvmCross.Logging;
-using MvvmCross.Plugin.Overlay.Platforms.Android.UI;
 using MvvmCross.ViewModels;
 using MvvmCross.Presenters.Attributes;
+using MvvmCross.Plugin.Overlay.Platforms.Android.EventSource;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
 {

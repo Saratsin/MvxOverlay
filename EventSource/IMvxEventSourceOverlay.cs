@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MvvmCross.Plugin.Overlay.Platforms.Android.UI
+namespace MvvmCross.Plugin.Overlay.Platforms.Android.EventSource
 {	
     public interface IMvxEventSourceOverlay
     {

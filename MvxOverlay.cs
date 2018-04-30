@@ -3,11 +3,12 @@ using Android.Views;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Binding.Views;
+using MvvmCross.Plugin.Overlay.Platforms.Android.EventSource;
 using MvvmCross.ViewModels;
 using MvvmCross.Views;
 using AView = Android.Views.View;
 
-namespace MvvmCross.Plugin.Overlay.Platforms.Android.UI
+namespace MvvmCross.Plugin.Overlay.Platforms.Android
 {
     public abstract class MvxOverlay : MvxEventSourceOverlay, IMvxView, IMvxBindingContextOwner, IMvxLayoutInflaterHolder
     {

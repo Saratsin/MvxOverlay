@@ -1,6 +1,6 @@
 ﻿using Android.Views;
 
-namespace MvvmCross.Plugin.Overlay.Platforms.Android.UI
+namespace MvvmCross.Plugin.Overlay.Platforms.Android
 {
     public class OverlayLocationParams
     {

@@ -121,16 +121,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MvxOverlayPresentationAttribute.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="UI\IMvxEventSourceOverlay.cs" />
-    <Compile Include="UI\MvxEventSourceOverlay.cs" />
-    <Compile Include="UI\MvxOverlay.cs" />
-    <Compile Include="UI\MvxOverlayAdapter.cs" />
-    <Compile Include="UI\MvxOverlayOfTViewModel.cs" />
-    <Compile Include="UI\OverlayLocationParams.cs" />
+    <Compile Include="EventSource\IMvxEventSourceOverlay.cs" />
+    <Compile Include="EventSource\MvxEventSourceOverlay.cs" />
     <Compile Include="Services\OverlayPermissionService.cs" />
     <Compile Include="Services\OverlayPresentationService.cs" />
     <Compile Include="Presenters\MvxOverlayAndroidViewPresenter.cs" />
     <Compile Include="Presenters\MvxOverlayAppCompatViewPresenter.cs" />
+    <Compile Include="MvxOverlay.cs" />
+    <Compile Include="MvxOverlayAdapter.cs" />
+    <Compile Include="MvxOverlayOfTViewModel.cs" />
+    <Compile Include="OverlayLocationParams.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -140,7 +140,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\" />
+    <Folder Include="EventSource\" />
     <Folder Include="Services\" />
     <Folder Include="Presenters\" />
   </ItemGroup>
