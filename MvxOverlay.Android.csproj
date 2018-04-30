@@ -145,7 +145,6 @@
     <Folder Include="Presenters\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.9\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.9\build\Xamarin.Build.Download.targets')" />
   <Import Project="..\..\packages\Xamarin.Build.Download.0.4.10\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.10\build\Xamarin.Build.Download.targets')" />
   <Import Project="..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
   <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
