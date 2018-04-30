@@ -6,7 +6,7 @@ using MvvmCross.Logging;
 using MvvmCross.ViewModels;
 using MvvmCross.Views;
 
-namespace MvvmCross.Plugin.Overlay.Platforms.Android.UI
+namespace MvvmCross.Plugin.Overlay.Platforms.Android
 {
     public class MvxOverlayAdapter : IDisposable
     {

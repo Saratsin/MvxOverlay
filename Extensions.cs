@@ -4,7 +4,6 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Plugin.Overlay.Platforms.Android.Services;
-using MvvmCross.Plugin.Overlay.Platforms.Android.UI;
 using MvvmCross.Presenters;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android
