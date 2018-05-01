@@ -8,7 +8,7 @@ using MvvmCross.Views;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android
 {
-    public class MvxOverlayAdapter : IDisposable
+    internal class MvxOverlayAdapter : IDisposable
     {
         private readonly MvxOverlay _view;
 
