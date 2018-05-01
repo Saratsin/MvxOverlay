@@ -10,6 +10,7 @@ using AView = Android.Views.View;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android
 {
+    [MvxOverlayPresentation]
     public abstract class MvxOverlay : MvxEventSourceOverlay, IMvxView, IMvxBindingContextOwner, IMvxLayoutInflaterHolder
     {
         private readonly MvxOverlayAdapter _viewAdapter;

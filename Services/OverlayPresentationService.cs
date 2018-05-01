@@ -11,7 +11,7 @@ using MvvmCross.Plugin.Overlay.Platforms.Android.EventSource;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
 {
-    public class OverlayPresentationService
+    internal class OverlayPresentationService
     {
 		private readonly List<MvxOverlay> _overlays = new List<MvxOverlay>();
 

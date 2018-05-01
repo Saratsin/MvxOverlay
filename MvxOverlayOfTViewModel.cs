@@ -4,7 +4,6 @@ using MvvmCross.Views;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android
 {
-    [MvxOverlayPresentation]
     public abstract class MvxOverlay<TViewModel> : MvxOverlay, IMvxView<TViewModel> where TViewModel : class, IMvxViewModel
     {
         protected MvxOverlay(Context context) : base(context)
