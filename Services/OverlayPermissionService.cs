@@ -6,6 +6,7 @@ using Android.Content;
 using Android.Provider;
 using Android.Widget;
 using AUri = Android.Net.Uri;
+using MvvmCross.Base;
 
 namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
 {
@@ -37,8 +38,9 @@ namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
 
         private Task ShowToastAsync(int textResId, ToastLength duration)
         {
-            Toast.MakeText(Application.Context, textResId, duration);
-            return Task.Delay(duration.ToTimeSpan());
+            return Mvx.Resolve<IMvxMainThreadAsyncDispatcher>()
+                      .ExecuteOnMainThreadAsync(() => Toast.MakeText(Application.Context, textResId, duration))
+                      .ContinueWith(t => Task.Delay(duration.ToTimeSpan()));
         }
 
         public async Task<bool> TryEnablePermissionIfDisabled(TimeSpan timeout)
