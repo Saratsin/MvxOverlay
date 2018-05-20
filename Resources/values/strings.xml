@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="library_name">MvvmCross.Plugin.Overlay</string>
-    <string name="no_overlay_permission_toast">Ooops, we don\'t have permission to show you our beuatiful app button. Please enable this permissions to enjoy our app features)</string>
 </resources>

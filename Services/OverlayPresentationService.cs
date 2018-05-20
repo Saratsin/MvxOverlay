@@ -54,10 +54,7 @@ namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
         {
             if (!OverlayPermissionService.Instance.CanDrawOverlays)
             {
-                var permissionIsEnabled = await OverlayPermissionService.Instance.TryEnablePermissionIfDisabled(TimeSpan.FromMinutes(1.0));
-
-                if (!permissionIsEnabled)
-                    return;
+                return;
             }
 
             if (!viewType.IsSubclassOf(typeof(MvxOverlay)))

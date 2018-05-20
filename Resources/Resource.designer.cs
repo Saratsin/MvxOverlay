@@ -4100,9 +4100,6 @@ namespace MvvmCross.Plugin.Overlay.Platforms.Android
 			// aapt resource value: 0x7f0a0014
 			public static int mr_user_route_category_name = 2131361812;
 			
-			// aapt resource value: 0x7f0a003f
-			public static int no_overlay_permission_toast = 2131361855;
-			
 			// aapt resource value: 0x7f0a0036
 			public static int password_toggle_content_description = 2131361846;
 			

@@ -28,27 +28,29 @@ namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
                 await Task.Delay(500).ConfigureAwait(false);
         }
 
-        private async Task ShowOverlayPermissionScreenAsync()
+        private void ShowOverlayPermissionScreen()
         {
-            await ShowToastAsync(Resource.String.no_overlay_permission_toast, ToastLength.Long).ConfigureAwait(false);
             var intent = new Intent(Settings.ActionManageOverlayPermission, AUri.FromParts("package", Application.Context.PackageName, null));
             intent.AddFlags(ActivityFlags.NewTask);
             Application.Context.StartActivity(intent);
         }
 
-        private Task ShowToastAsync(int textResId, ToastLength duration)
+        private Task ShowToastAsync(string text, ToastLength duration)
         {
             return Mvx.Resolve<IMvxMainThreadAsyncDispatcher>()
-                      .ExecuteOnMainThreadAsync(() => Toast.MakeText(Application.Context, textResId, duration))
+                      .ExecuteOnMainThreadAsync(() => Toast.MakeText(Application.Context, text, duration))
                       .ContinueWith(t => Task.Delay(duration.ToTimeSpan()));
         }
 
-        public async Task<bool> TryEnablePermissionIfDisabled(TimeSpan timeout)
+        public async Task<bool> TryEnablePermissionIfDisabled(TimeSpan timeout, string toastHintText = null)
         {
             if (CanDrawOverlays)
                 return true;
 
-            await ShowOverlayPermissionScreenAsync().ConfigureAwait(false);
+			if(!string.IsNullOrEmpty(toastHintText))
+				await ShowToastAsync(toastHintText, ToastLength.Long).ConfigureAwait(false);
+
+			ShowOverlayPermissionScreen();
 
             await WaitTillPermissionIsEnabled(timeout).ConfigureAwait(false);
 
