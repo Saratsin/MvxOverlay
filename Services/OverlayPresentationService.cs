@@ -50,7 +50,7 @@ namespace MvvmCross.Plugin.Overlay.Platforms.Android.Services
             ShowOverlayView(viewType, request);
         }
 
-        public async void ShowOverlayView(Type viewType, MvxViewModelRequest request)
+        public void ShowOverlayView(Type viewType, MvxViewModelRequest request)
         {
             if (!OverlayPermissionService.Instance.CanDrawOverlays)
             {
