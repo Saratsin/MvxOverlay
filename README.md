@@ -47,25 +47,25 @@ public class ExampleOverlay : MvxOverlay<ExampleViewModel>
     { 
     }
 
-	public override View CreateAndSetViewBindings()
-	{
-		var button = new Button(Context)
-		{
-			LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
-		};
+    public override View CreateAndSetViewBindings()
+    {
+        var button = new Button(Context)
+        {
+            LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
+        };
 
-	    var set = this.CreateBindingSet<ExampleOverlay, ExampleViewModel>();
+        var set = this.CreateBindingSet<ExampleOverlay, ExampleViewModel>();
 
-	    set.Bind(_button).For(v => v.Text).To(vm => vm.ButtonText);
+        set.Bind(_button).For(v => v.Text).To(vm => vm.ButtonText);
         set.Bind(_button).For(nameof(View.Click)).To(vm => vm.ButtonClickedCommand);
         set.Bind(_button).For(nameof(View.LongClick)).To(vm => vm.ConnectButtonLongClickedCommand);
 
-	    set.Apply();
+        set.Apply();
 
-	    return frame;
-	}
+        return frame;
+    }
 
-	public override OverlayLocationParams CreateLocationParams()
+    public override OverlayLocationParams CreateLocationParams()
     {
         return new OverlayLocationParams(
             gravity: GravityFlags.CenterHorizontal | GravityFlags.Top, 
