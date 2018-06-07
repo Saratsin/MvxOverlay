@@ -56,13 +56,13 @@ public class ExampleOverlay : MvxOverlay<ExampleViewModel>
 
         var set = this.CreateBindingSet<ExampleOverlay, ExampleViewModel>();
 
-        set.Bind(_button).For(v => v.Text).To(vm => vm.ButtonText);
-        set.Bind(_button).For(nameof(View.Click)).To(vm => vm.ButtonClickedCommand);
-        set.Bind(_button).For(nameof(View.LongClick)).To(vm => vm.ConnectButtonLongClickedCommand);
+        set.Bind(button).For(v => v.Text).To(vm => vm.ButtonText);
+        set.Bind(button).For(nameof(View.Click)).To(vm => vm.ButtonClickedCommand);
+        set.Bind(button).For(nameof(View.LongClick)).To(vm => vm.ConnectButtonLongClickedCommand);
 
         set.Apply();
 
-        return frame;
+        return button;
     }
 
     public override OverlayLocationParams CreateLocationParams()
